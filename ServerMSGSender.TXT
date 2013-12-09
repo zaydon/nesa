@@ -1,0 +1,65 @@
+// Decompiled by DJ v3.12.12.96 Copyright 2011 Atanas Neshkov  Date: 09.12.2013 19:04:30
+// Home Page: http://members.fortunecity.com/neshkov/dj.html  http://www.neshkov.com/dj.html - Check often for new version!
+// Decompiler options: packimports(3) 
+
+package siz.servercom;
+
+import java.io.PrintStream;
+import java.util.Vector;
+import siz.Log;
+
+// Referenced classes of package siz.servercom:
+//            OSConnection
+
+public class ServerMSGSender
+    implements Runnable
+{
+
+    public ServerMSGSender(PrintStream printstream, OSConnection osconnection)
+    {
+        running = false;
+        out = printstream;
+        osc = osconnection;
+        (new Thread(this)).start();
+    }
+
+    public void run()
+    {
+        for(running = true; running;)
+        {
+            while(osc.getMSGToServerVector().size() > 0) 
+                try
+                {
+                    out.println((String)osc.getMSGToServerVector().firstElement());
+                    out.flush();
+                    Log.debug("ServerMSGSender", (new StringBuilder()).append("Send MSG to Server: ").append((String)osc.getMSGToServerVector().firstElement()).toString());
+                    osc.getMSGToServerVector().removeElementAt(0);
+                }
+                catch(Exception exception) { }
+            try
+            {
+                Thread.sleep(50L);
+            }
+            catch(InterruptedException interruptedexception)
+            {
+                interruptedexception.printStackTrace();
+            }
+        }
+
+        try
+        {
+            if(null != out)
+                out.close();
+        }
+        catch(Exception exception1) { }
+    }
+
+    public void close()
+    {
+        running = false;
+    }
+
+    private PrintStream out;
+    private OSConnection osc;
+    private boolean running;
+}
