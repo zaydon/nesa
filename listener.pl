@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use feature qw(say);
 use IO::Socket::INET;
+my $client;
 
 my $localport = 7030;
 my $server    = IO::Socket::INET->new(
