@@ -1,0 +1,22 @@
+<message shootingrange="1">welcome, here i am</message><command>get_status</command>
+<command>get_settings</command><status menuItem="" isWarmup="false" isHotmode="false" isPause="true" isLigaPause="false" isCompetitionFinished="false" isMaxShotsReached="false" timeLeftLong="-1386699970517" shooterSID="" shooterName="" shootingrange="1" diskTyp="1" shotcount="11" />
+<settings shooterSID="" shooterName="" shootingrange="1" isServerMode="false" isShowAbweichung="false" isShowMinUmkreis="false" isKingShot="false" isSmartCardMode="false" isZehntelShot="false" isZehntelSum="false" isZoomMode="false" standplatzCounter="2" />
+<command shootingrange="1" menuID="100_1">changed_to_warmup</command><cornercolor>100:100:100</cornercolor>
+<shot shootingrange="1" shootersid="" shot="0" shotcount="1" isvalid="true" ishot="false" iswarm="true" x="-734" y="168" teiler="752.9807434456741" winkel="282" disktyp="lg" dummy="false" shotTime="1386699997319" menuid="100_1">80</shot>
+<shot shootingrange="1" shootersid="" shot="1" shotcount="2" isvalid="true" ishot="false" iswarm="true" x="457" y="-964" teiler="1066.8387881962299" winkel="154" disktyp="lg" dummy="false" shotTime="1386699998285" menuid="100_1">67</shot>
+<shot shootingrange="1" shootersid="" shot="2" shotcount="3" isvalid="true" ishot="false" iswarm="true" x="-568" y="-553" teiler="792.7376615249209" winkel="225" disktyp="lg" dummy="false" shotTime="1386699999173" menuid="100_1">78</shot>
+<shot shootingrange="1" shootersid="" shot="3" shotcount="4" isvalid="true" ishot="false" iswarm="true" x="128" y="-543" teiler="557.8826041381825" winkel="166" disktyp="lg" dummy="false" shotTime="1386699999781" menuid="100_1">88</shot>
+<shot shootingrange="1" shootersid="" shot="4" shotcount="5" isvalid="true" ishot="false" iswarm="true" x="693" y="-49" teiler="694.7301634447723" winkel="94" disktyp="lg" dummy="false" shotTime="1386700000801" menuid="100_1">82</shot>
+<command shootingrange="1" menuID="100_1">changed_to_hotmode</command>
+<shot shootingrange="1" shootersid="" shot="5" shotcount="1" isvalid="true" ishot="true" iswarm="false" x="25" y="-344" teiler="344.90723390500233" winkel="175" disktyp="lg" dummy="false" shotTime="1386700005853" menuid="100_1">96</shot>
+<shot shootingrange="1" shootersid="" shot="6" shotcount="2" isvalid="true" ishot="true" iswarm="false" x="-456" y="442" teiler="635.0590523722971" winkel="314" disktyp="lg" dummy="false" shotTime="1386700006308" menuid="100_1">85</shot>
+<shot shootingrange="1" shootersid="" shot="7" shotcount="3" isvalid="true" ishot="true" iswarm="false" x="-1132" y="-257" teiler="1160.807046842842" winkel="257" disktyp="lg" dummy="false" shotTime="1386700006748" menuid="100_1">64</shot>
+<shot shootingrange="1" shootersid="" shot="8" shotcount="4" isvalid="true" ishot="true" iswarm="false" x="143" y="542" teiler="560.54705422471" winkel="14" disktyp="lg" dummy="false" shotTime="1386700007277" menuid="100_1">88</shot>
+<shot shootingrange="1" shootersid="" shot="9" shotcount="5" isvalid="true" ishot="true" iswarm="false" x="-831" y="-247" teiler="866.931369832699" winkel="253" disktyp="lg" dummy="false" shotTime="1386700007573" menuid="100_1">75</shot>
+<shot shootingrange="1" shootersid="" shot="10" shotcount="6" isvalid="true" ishot="true" iswarm="false" x="357" y="824" teiler="898.0116925742115" winkel="23" disktyp="lg" dummy="false" shotTime="1386700007877" menuid="100_1">74</shot>
+<shot shootingrange="1" shootersid="" shot="11" shotcount="7" isvalid="true" ishot="true" iswarm="false" x="1095" y="727" teiler="1314.3644852170953" winkel="56" disktyp="lg" dummy="false" shotTime="1386700008173" menuid="100_1">57</shot>
+<shot shootingrange="1" shootersid="" shot="12" shotcount="8" isvalid="true" ishot="true" iswarm="false" x="-390" y="759" teiler="853.3352213520781" winkel="332" disktyp="lg" dummy="false" shotTime="1386700008797" menuid="100_1">76</shot>
+<shot shootingrange="1" shootersid="" shot="13" shotcount="9" isvalid="true" ishot="true" iswarm="false" x="-357" y="292" teiler="461.20819593758307" winkel="309" disktyp="lg" dummy="false" shotTime="1386700009117" menuid="100_1">92</shot>
+<shot shootingrange="1" shootersid="" shot="14" shotcount="10" isvalid="true" ishot="true" iswarm="false" x="-228" y="-107" teiler="251.85908758669004" winkel="244" disktyp="lg" dummy="false" shotTime="1386700009493" menuid="100_1">100</shot>
+<command shootingrange="1" menuID="100_1">competition_finished</command>
+<command shootingrange="1" menuID="100_1">cleanup_after_competition</command>
