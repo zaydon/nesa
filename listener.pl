@@ -4,7 +4,9 @@ use strict;
 use warnings;
 use feature qw(say);
 use IO::Socket::INET;
-my $client;
+use Time::HiRes;
+
+my $client, my $data;
 
 my $localport = 7030;
 my $server    = IO::Socket::INET->new(
@@ -19,17 +21,25 @@ while ($client = $server->accept()) {
     #say my $answer = <$client> =~ s/\R\z//r;
 
     #send
+    #my $data = "<command>get_status</command><command>get_settings</command>";
+    #$client->send($data);
+  #  print "Received from Client: $data\n";
+
     while (1) {
-    my $data = "<command>get_status</command><command>get_settings</command>";
-    $client->send($data);
-    #my $data = <$client>;
+       #my $data = <$client>;
 
     #$client->recv($data, 1024);
-    print "Received from Client: $data\n";
-	
-	$client->recv($data,1024);
+   	$client->recv($data,4096);
 	print "Received from Client : $data\n";    
+	if ( 'menuID="100_1"' =~ /$data/)
+	{ print "LUFTGEWEHR!!";}
+
+	sleep(0.010);
 	}
+}
+
+sub function_name {
+	# body...
 }
 
 close($server);
