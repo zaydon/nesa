@@ -1,0 +1,5 @@
+java.lang.NullPointerException
+	at siz.servercom.ServerMsgHandling.analyseElement(Unknown Source)
+	at siz.servercom.ServerMsgHandling.getServerMsg(Unknown Source)
+	at siz.servercom.OSConnection.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:724)
