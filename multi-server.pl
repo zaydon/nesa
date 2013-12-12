@@ -4,9 +4,10 @@ use strict;
 use warnings;
 use IO::Socket::INET;
 use IO::Select;
+use IO::File;
 
 my ($readable_handles,
-    $main_socket, $sock, $new_sock, $buf);
+    $main_socket, $sock, $new_sock, $buf, $fh);
 
 $main_socket = new IO::Socket::INET (
     LocalPort => '7030',
@@ -16,9 +17,11 @@ $main_socket = new IO::Socket::INET (
     ) 
         or die "ERROR in Socket Creation : $!\n";
 
+open (FH, ">>logfile.txt") or die "Konnte Datei nicht schreiben: $!\n!";
 
 $readable_handles = new IO::Select();
 $readable_handles->add($main_socket);
+
 
 while (1) {  #Infinite loop
     # select() blocks until a socket is ready to be read or written
@@ -27,6 +30,8 @@ while (1) {  #Infinite loop
     # If it comes here, there is at least one handle
     # to read from or write to. For the moment, worry only about 
     # the read side.
+    
+
     foreach $sock (@$new_readable) {
         if ($sock == $main_socket) {
             $new_sock = $sock->accept();
@@ -38,7 +43,7 @@ while (1) {  #Infinite loop
             $buf = <$sock>;
             if ($buf) {
                 # .... Do stuff with $buf
-                print "BUF: $buf\n";
+                print FH "$buf\n";
             } else {
                 # Client closed socket. We do the same here, and remove
                 # it from the readable_handles list
@@ -48,3 +53,4 @@ while (1) {  #Infinite loop
         }
     }   
 }
+close(FH);
